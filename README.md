@@ -34,16 +34,19 @@ The Employee Management System project aims to achieve the following:
 ## Screenshots
 
 ### Main Menu
-![Main Menu](screenshots/2024-05-16_22-31-13.png)
+![2024-05-16_22-31-13](https://github.com/dallko/FinalProject/assets/150505854/30925150-50de-44a0-a901-cadb2fa268e0)
+
 
 ### Add Employee
-![Add Employee](screenshots/add_employee.png)
+![image](https://github.com/dallko/FinalProject/assets/150505854/e135b3ef-9630-4f73-807e-ad7400aeb10b)
+
 
 ### Delete Employee
 ![Delete Employee](screenshots/delete_employee.png)
 
 ### Display Employees
-![Display Employees](screenshots/display_employees.png)
+![image](https://github.com/dallko/FinalProject/assets/150505854/7bcc327f-5b53-447d-9577-ca335c6530ea)
+
 
 ### Update Performance Score
 ![Update Performance Score](screenshots/update_performance_score.png)

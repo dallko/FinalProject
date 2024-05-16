@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <string>
 #include <algorithm>
@@ -12,6 +13,36 @@ struct Employee {
     string role;
     int performanceScore; // New field for performance evaluation
 };
+
+// Function to save employees data to a file
+void saveData(const vector<Employee>& employees, const string& filename) {
+    ofstream file(filename);
+    if (file.is_open()) {
+        for (const auto& employee : employees) {
+            file << employee.id << " " << employee.name << " " << employee.age << " " << employee.role << " " << employee.performanceScore << "\n";
+        }
+        file.close();
+        cout << "Data saved successfully.\n";
+    } else {
+        cout << "Unable to open file to save data.\n";
+    }
+}
+
+// Function to load employees data from a file
+void loadData(vector<Employee>& employees, const string& filename) {
+    ifstream file(filename);
+    if (file.is_open()) {
+        employees.clear(); // Clear existing data before loading
+        Employee employee;
+        while (file >> employee.id >> employee.name >> employee.age >> employee.role >> employee.performanceScore) {
+            employees.push_back(employee);
+        }
+        file.close();
+        cout << "Data loaded successfully.\n";
+    } else {
+        cout << "Unable to open file to load data. Starting with an empty database.\n";
+    }
+}
 
 void addEmployee(vector<Employee>& employees) {
     Employee newEmployee;
@@ -96,6 +127,10 @@ void displayPerformanceScores(const vector<Employee>& employees) {
 int main() {
     vector<Employee> employees;
     int choice;
+    const string filename = "employees.txt";
+
+    // Load existing data from file
+    loadData(employees, filename);
 
     while (true) {
         cout << "1. Add Employee\n";
@@ -124,6 +159,8 @@ int main() {
                 displayPerformanceScores(employees);
                 break;
             case 6:
+                // Save data to file before exiting
+                saveData(employees, filename);
                 cout << "Exiting program.\n";
                 return 0;
             default:

@@ -49,7 +49,8 @@ The Employee Management System project aims to achieve the following:
 
 
 ### Update Performance Score
-![Update Performance Score](screenshots/update_performance_score.png)
+![image](https://github.com/dallko/FinalProject/assets/150505854/847c186f-b7f0-4705-acca-6dca2ac3ed8e)
+
 
 ### Display Performance Scores
 ![Display Performance Scores](screenshots/display_performance_scores.png)

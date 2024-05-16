@@ -11,10 +11,10 @@ struct Employee {
     string name;
     int age;
     string role;
-    int performanceScore; // New field for performance evaluation
+    int performanceScore; // Новое поле для оценки производительности
 };
 
-// Function to save employees data to a file
+// Функция для сохранения данных о сотрудниках в файл
 void saveData(const vector<Employee>& employees, const string& filename) {
     ofstream file(filename);
     if (file.is_open()) {
@@ -22,49 +22,49 @@ void saveData(const vector<Employee>& employees, const string& filename) {
             file << employee.id << " " << employee.name << " " << employee.age << " " << employee.role << " " << employee.performanceScore << "\n";
         }
         file.close();
-        cout << "Data saved successfully.\n\n";
+        cout << "Данные успешно сохранены.\n\n";
     } else {
-        cout << "Unable to open file to save data.\n\n";
+        cout << "Не удалось открыть файл для сохранения данных.\n\n";
     }
 }
 
-// Function to load employees data from a file
+// Функция для загрузки данных о сотрудниках из файла
 void loadData(vector<Employee>& employees, const string& filename) {
     ifstream file(filename);
     if (file.is_open()) {
-        employees.clear(); // Clear existing data before loading
+        employees.clear(); // Очистка существующих данных перед загрузкой
         Employee employee;
         while (file >> employee.id >> employee.name >> employee.age >> employee.role >> employee.performanceScore) {
             employees.push_back(employee);
         }
         file.close();
-        cout << "Data loaded successfully.\n\n";
+        cout << "Данные успешно загружены.\n\n";
     } else {
-        cout << "Unable to open file to load data. Starting with an empty database.\n\n";
+        cout << "Не удалось открыть файл для загрузки данных. Начало работы с пустой базой данных.\n\n";
     }
 }
 
 void addEmployee(vector<Employee>& employees) {
     Employee newEmployee;
-    cout << "Enter Employee ID: ";
+    cout << "Введите ID сотрудника: ";
     cin >> newEmployee.id;
-    cout << "Enter Employee Name: ";
-    cin.ignore(); // Ignore any remaining newline character from previous input
+    cout << "Введите имя сотрудника: ";
+    cin.ignore(); // Игнорировать любые оставшиеся символы новой строки от предыдущего ввода
     getline(cin, newEmployee.name);
-    cout << "Enter Employee Age: ";
+    cout << "Введите возраст сотрудника: ";
     cin >> newEmployee.age;
-    cout << "Enter Employee Role: ";
+    cout << "Введите роль сотрудника: ";
     cin.ignore();
     getline(cin, newEmployee.role);
-    cout << "Enter Employee Performance Score: ";
+    cout << "Введите оценку производительности сотрудника: ";
     cin >> newEmployee.performanceScore;
     employees.push_back(newEmployee);
-    cout << "Employee added successfully.\n\n";
+    cout << "Сотрудник успешно добавлен.\n\n";
 }
 
 void deleteEmployee(vector<Employee>& employees) {
     int id;
-    cout << "Enter Employee ID to delete: ";
+    cout << "Введите ID сотрудника для удаления: ";
     cin >> id;
 
     auto it = find_if(employees.begin(), employees.end(), [&id](const Employee& e) {
@@ -73,34 +73,34 @@ void deleteEmployee(vector<Employee>& employees) {
 
     if (it != employees.end()) {
         employees.erase(it);
-        cout << "Employee with ID " << id << " deleted.\n\n";
+        cout << "Сотрудник с ID " << id << " удален.\n\n";
     } else {
-        cout << "Employee with ID " << id << " not found.\n\n";
+        cout << "Сотрудник с ID " << id << " не найден.\n\n";
     }
 }
 
 void displayEmployees(const vector<Employee>& employees) {
     if (employees.empty()) {
-        cout << "No employees to display.\n\n";
+        cout << "Нет сотрудников для отображения.\n\n";
         return;
     }
 
-    cout << "Employees:\n";
+    cout << "Сотрудники:\n";
     for (const auto& employee : employees) {
         cout << "ID: " << employee.id << "\n";
-        cout << "Name: " << employee.name << "\n";
-        cout << "Age: " << employee.age << "\n";
-        cout << "Role: " << employee.role << "\n";
-        cout << "Performance Score: " << employee.performanceScore << "\n"; // Display performance score
+        cout << "Имя: " << employee.name << "\n";
+        cout << "Возраст: " << employee.age << "\n";
+        cout << "Роль: " << employee.role << "\n";
+        cout << "Оценка производительности: " << employee.performanceScore << "\n"; // Отображение оценки производительности
         cout << "---------------------\n\n";
     }
 }
 
 void updatePerformanceScore(vector<Employee>& employees) {
     int id, newScore;
-    cout << "Enter Employee ID to update performance score: ";
+    cout << "Введите ID сотрудника для обновления оценки производительности: ";
     cin >> id;
-    cout << "Enter new Performance Score: ";
+    cout << "Введите новую оценку производительности: ";
     cin >> newScore;
 
     auto it = find_if(employees.begin(), employees.end(), [&id](const Employee& e) {
@@ -109,21 +109,21 @@ void updatePerformanceScore(vector<Employee>& employees) {
 
     if (it != employees.end()) {
         it->performanceScore = newScore;
-        cout << "Performance Score of Employee with ID " << id << " updated.\n\n";
+        cout << "Оценка производительности сотрудника с ID " << id << " обновлена.\n\n";
     } else {
-        cout << "Employee with ID " << id << " not found.\n\n";
+        cout << "Сотрудник с ID " << id << " не найден.\n\n";
     }
 }
 
 void displayPerformanceScores(const vector<Employee>& employees) {
     if (employees.empty()) {
-        cout << "No employees to display performance scores.\n\n";
+        cout << "Нет сотрудников для отображения оценок производительности.\n\n";
         return;
     }
 
-    cout << "Performance Scores:\n";
+    cout << "Оценки производительности:\n";
     for (const auto& employee : employees) {
-        cout << "ID: " << employee.id << ", Name: " << employee.name << ", Performance Score: " << employee.performanceScore << "\n";
+        cout << "ID: " << employee.id << ", Имя: " << employee.name << ", Оценка производительности: " << employee.performanceScore << "\n";
     }
     cout << endl;
 }
@@ -133,17 +133,17 @@ int main() {
     int choice;
     const string filename = "employees.txt";
 
-    // Load existing data from file
+    // Загрузка существующих данных из файла
     loadData(employees, filename);
 
     while (true) {
-        cout << "1. Add Employee\n";
-        cout << "2. Delete Employee\n";
-        cout << "3. Display Employees\n";
-        cout << "4. Update Performance Score\n"; // New option for updating performance score
-        cout << "5. Display Performance Scores\n"; // New option for displaying performance scores
-        cout << "6. Exit\n";
-        cout << "Enter your choice: ";
+        cout << "1. Добавить сотрудника\n";
+        cout << "2. Удалить сотрудника\n";
+        cout << "3. Отобразить список сотрудников\n";
+        cout << "4. Обновить оценку производительности\n";
+        cout << "5. Отобразить оценки производительности\n"; 
+        cout << "6. Выйти\n";
+        cout << "Введите ваш выбор: ";
         cin >> choice;
 
         switch (choice) {
@@ -163,12 +163,9 @@ int main() {
                 displayPerformanceScores(employees);
                 break;
             case 6:
-                // Save data to file before exiting
+                // Сохранение данных в файл перед выходом
                 saveData(employees, filename);
-                cout << "Exiting program.\n";
+                cout << "Завершение работы программы.\n";
                 return 0;
             default:
-                cout << "Invalid choice. Please try again.\n\n";
-        }
-    }
-}
+                cout

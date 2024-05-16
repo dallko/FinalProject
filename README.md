@@ -1,6 +1,6 @@
 # Employee Management System
 
-## PRESENTATION [link(https://www.programiz.com/cpp-programming/online-compiler/)]
+## PRESENTATION 
 
 ## Description
 The Employee Management System is a console-based application designed to manage employee records, including personal information, job details, and performance evaluations. The application allows users to add, search, update, delete, and display employee records, as well as manage performance evaluations for each employee.

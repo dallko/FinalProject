@@ -1,23 +1,41 @@
 # Employee Management System
 
-## PRESENTATION 
-
 ## Description
-The Employee Management System is a console-based application designed to manage employee records, including personal information, job details, and performance evaluations. The application allows users to add, search, update, delete, and display employee records, as well as manage performance evaluations for each employee.
+
+The Employee Management System is a simple C++ console application designed to manage employee information. It allows users to add, delete, and display employee details, as well as update and display performance scores. This project is aimed at providing a basic structure for employee management tasks in an organization.
 
 ## Objectives
-- Add New Records: Allow users to add new employee records.
-- Search Records: Enable users to search for employee records by employee ID.
-- Display All Records: Provide functionality to display all employee records.
-- Update Records: Allow users to update existing employee records.
-- Delete Records: Enable users to delete employee records by employee ID.
-- Performance Evaluations: Allow users to add and display performance evaluations for employees.
-- Persistent Storage: Ensure all data is stored persistently using file I/O operations.
+
+1. **Add Employee**: Allows the user to add new employees with details such as ID, name, age, role, and performance score.
+2. **Delete Employee**: Enables the user to delete an employee's record using their ID.
+3. **Display Employees**: Lists all the employees along with their details.
+4. **Update Performance Score**: Provides functionality to update the performance score of an existing employee.
+5. **Display Performance Scores**: Lists all employees along with their performance scores.
+
 ## Features
-- Add a New Record: Users can input and save new employee data, ensuring no duplicate IDs.
-- Search Employee by ID: Retrieve and display information of an employee based on their ID.
-- Display All Employees: List all employee records in a formatted manner.
-- Update Employee Record: Modify existing employee information.
-- Delete Employee Record: Remove an employee record from the system.
-- Add Performance Evaluation: Attach performance evaluations to employee records.
-- Display Performance Evaluations: Show all performance evaluations of a specific employee.
+
+- Add new employees.
+- Delete existing employees.
+- Display the list of all employees with their details.
+- Update the performance score of an employee.
+- Display performance scores of all employees.
+
+## Screenshots
+
+### Main Menu
+![Main Menu](screenshots/main_menu.png)
+
+### Add Employee
+![Add Employee](screenshots/add_employee.png)
+
+### Delete Employee
+![Delete Employee](screenshots/delete_employee.png)
+
+### Display Employees
+![Display Employees](screenshots/display_employees.png)
+
+### Update Performance Score
+![Update Performance Score](screenshots/update_performance_score.png)
+
+### Display Performance Scores
+![Display Performance Scores](screenshots/display_performance_scores.png)

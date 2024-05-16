@@ -34,7 +34,7 @@ The Employee Management System project aims to achieve the following:
 ## Screenshots
 
 ### Main Menu
-![Main Menu](screenshots/main_menu.png)
+![Main Menu](screenshots/2024-05-16_22-31-13.png)
 
 ### Add Employee
 ![Add Employee](screenshots/add_employee.png)

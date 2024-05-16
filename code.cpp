@@ -22,9 +22,9 @@ void saveData(const vector<Employee>& employees, const string& filename) {
             file << employee.id << " " << employee.name << " " << employee.age << " " << employee.role << " " << employee.performanceScore << "\n";
         }
         file.close();
-        cout << "Data saved successfully.\n";
+        cout << "Data saved successfully.\n\n";
     } else {
-        cout << "Unable to open file to save data.\n";
+        cout << "Unable to open file to save data.\n\n";
     }
 }
 
@@ -38,9 +38,9 @@ void loadData(vector<Employee>& employees, const string& filename) {
             employees.push_back(employee);
         }
         file.close();
-        cout << "Data loaded successfully.\n";
+        cout << "Data loaded successfully.\n\n";
     } else {
-        cout << "Unable to open file to load data. Starting with an empty database.\n";
+        cout << "Unable to open file to load data. Starting with an empty database.\n\n";
     }
 }
 
@@ -59,6 +59,7 @@ void addEmployee(vector<Employee>& employees) {
     cout << "Enter Employee Performance Score: ";
     cin >> newEmployee.performanceScore;
     employees.push_back(newEmployee);
+    cout << "Employee added successfully.\n\n";
 }
 
 void deleteEmployee(vector<Employee>& employees) {
@@ -72,25 +73,26 @@ void deleteEmployee(vector<Employee>& employees) {
 
     if (it != employees.end()) {
         employees.erase(it);
-        cout << "Employee with ID " << id << " deleted.\n";
+        cout << "Employee with ID " << id << " deleted.\n\n";
     } else {
-        cout << "Employee with ID " << id << " not found.\n";
+        cout << "Employee with ID " << id << " not found.\n\n";
     }
 }
 
 void displayEmployees(const vector<Employee>& employees) {
     if (employees.empty()) {
-        cout << "No employees to display.\n";
+        cout << "No employees to display.\n\n";
         return;
     }
 
+    cout << "Employees:\n";
     for (const auto& employee : employees) {
         cout << "ID: " << employee.id << "\n";
         cout << "Name: " << employee.name << "\n";
         cout << "Age: " << employee.age << "\n";
         cout << "Role: " << employee.role << "\n";
         cout << "Performance Score: " << employee.performanceScore << "\n"; // Display performance score
-        cout << "---------------------\n";
+        cout << "---------------------\n\n";
     }
 }
 
@@ -107,21 +109,23 @@ void updatePerformanceScore(vector<Employee>& employees) {
 
     if (it != employees.end()) {
         it->performanceScore = newScore;
-        cout << "Performance Score of Employee with ID " << id << " updated.\n";
+        cout << "Performance Score of Employee with ID " << id << " updated.\n\n";
     } else {
-        cout << "Employee with ID " << id << " not found.\n";
+        cout << "Employee with ID " << id << " not found.\n\n";
     }
 }
 
 void displayPerformanceScores(const vector<Employee>& employees) {
     if (employees.empty()) {
-        cout << "No employees to display performance scores.\n";
+        cout << "No employees to display performance scores.\n\n";
         return;
     }
 
+    cout << "Performance Scores:\n";
     for (const auto& employee : employees) {
         cout << "ID: " << employee.id << ", Name: " << employee.name << ", Performance Score: " << employee.performanceScore << "\n";
     }
+    cout << endl;
 }
 
 int main() {
@@ -164,7 +168,7 @@ int main() {
                 cout << "Exiting program.\n";
                 return 0;
             default:
-                cout << "Invalid choice. Please try again.\n";
+                cout << "Invalid choice. Please try again.\n\n";
         }
     }
 }

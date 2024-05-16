@@ -42,7 +42,8 @@ The Employee Management System project aims to achieve the following:
 
 
 ### Delete Employee
-![Delete Employee](screenshots/delete_employee.png)
+![image](https://github.com/dallko/FinalProject/assets/150505854/c1accdf1-03ae-4846-8b56-306badb2158d)
+
 
 ### Display Employees
 ![image](https://github.com/dallko/FinalProject/assets/150505854/7bcc327f-5b53-447d-9577-ca335c6530ea)
@@ -53,5 +54,6 @@ The Employee Management System project aims to achieve the following:
 
 
 ### Display Performance Scores
-![Display Performance Scores](screenshots/display_performance_scores.png)
+![image](https://github.com/dallko/FinalProject/assets/150505854/ccde56a8-0b24-4645-93ac-8605fc182e52)
+
 

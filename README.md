@@ -57,3 +57,5 @@ The Employee Management System project aims to achieve the following:
 ![image](https://github.com/dallko/FinalProject/assets/150505854/ccde56a8-0b24-4645-93ac-8605fc182e52)
 
 
+## Presentation:
+https://www.canva.com/design/DAGFc3kogQI/FbXHn0ejrSVjn1Rv6zIC0g/edit?utm_content=DAGFc3kogQI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton

@@ -1,8 +1,8 @@
-# Employee Management System
+# Employee Information System
 
 ## Description
 
-The Employee Management System is a simple C++ console application designed to manage employee information. It allows users to add, delete, and display employee details, as well as update and display performance scores. This project aims to provide a basic structure for employee management tasks in an organization.
+The Employee Information System is a simple C++ console application designed to manage employee information. It allows users to add, delete, and display employee details, as well as update and display performance scores. This project aims to provide a basic structure for employee management tasks in an organization.
 
 ## Objectives
 

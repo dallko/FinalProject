@@ -1,4 +1,4 @@
-# Employee Management System Documentation
+# Employee Information System Documentation
 
 ## Purpose:
 The purpose of this project is to create a simple employee management system using C++. The system allows users to add, delete, display, and update performance scores of employees. It also provides functionality to persistently store employee data in a file, ensuring that the data is remembered even if the program stops running.
